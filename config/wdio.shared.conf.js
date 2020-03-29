@@ -34,6 +34,7 @@ exports.config = {
         command: 'appium',
     },
 
+    path: '/wd/hub',
     port: 4723,
 
     // ====================
