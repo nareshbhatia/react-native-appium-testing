@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "plugin:wdio/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module"
+  },
+  "globals": {
+    "$": true,
+    "$$": true,
+    "browser": true,
+    "driver": true
+  },
+  "plugins": [
+    "import",
+    "wdio",
+    "prettier"
+  ],
+  "env": {
+    "jasmine": true
+  }
+}
