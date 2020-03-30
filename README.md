@@ -20,6 +20,9 @@ app as the application to test.
     archive should be placed at apps/ReactNativeTesting.app).
 -   Install [Appium](http://appium.io/) using the following command:
     `npm install -g appium`.
+-   Install Carthage dependency manager: `brew install carthage`. (This is a
+    dependency for the XCUITest Driver used by Appium - details
+    [here](http://appium.io/docs/en/drivers/ios-xcuitest/))
 
 ### To run tests using the Jasmine framework
 
