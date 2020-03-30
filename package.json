@@ -2,8 +2,7 @@
   "name": "react-native-appium-testing",
   "version": "0.0.1",
   "scripts": {
-    "ios.app": "./node_modules/.bin/wdio ./config/wdio.ios.app.conf.js",
-    "ios.browser": "./node_modules/.bin/wdio ./config/wdio.ios.browser.conf.js",
+    "ios.jasmine": "./node_modules/.bin/wdio ./config/wdio.ios.jasmine.conf.js",
     "lint": "eslint config tests",
     "format": "prettier --write README.md *.js config/*.js 'tests/**/{*.md,*.json,*.js}'"
   },
