@@ -18,7 +18,8 @@ app as the application to test.
     page. The file is called ReactNativeTesting.app.zip. Unzip this file and
     store it in a folder called `apps` at the root of your local repository (the
     archive should be placed at apps/ReactNativeTesting.app).
--   Download and install [Appium](http://appium.io/).
+-   Install [Appium](http://appium.io/) using the following command:
+    `npm install -g appium`.
 
 ### To run tests using the Jasmine framework
 
