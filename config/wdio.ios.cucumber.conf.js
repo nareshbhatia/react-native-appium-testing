@@ -7,11 +7,24 @@ config = {
     runner: 'local',
     path: '/wd/hub',
     port: 4723,
-    framework: 'jasmine',
-    jasmineNodeOpts: {
-        // Updated the timeout to 30 seconds due to possible longer appium calls
-        // When using XPATH
-        defaultTimeoutInterval: 90000,
+    framework: 'cucumber',
+    cucumberOpts: {
+        require: ['./tests/steps/**/*.steps.js'],
+        requireModule: ['@babel/register'],
+        backtrace: false,
+        compiler: [],
+        dryRun: false,
+        failFast: false,
+        format: ['pretty'],
+        colors: true,
+        snippets: true,
+        source: true,
+        profile: [],
+        strict: false,
+        tags: [],
+        timeout: 100000,
+        ignoreUndefinedDefinitions: false,
+        tagExpression: 'not @skip',
     },
     sync: true,
     logLevel: 'silent',
@@ -22,12 +35,23 @@ config = {
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
-    reporters: ['spec'],
+    reporters: [
+        'spec',
+        [
+            'allure',
+            {
+                outputDir: './test-report/allure-result/',
+                disableWebdriverStepsReporting: true,
+                disableWebdriverScreenshotsReporting: false,
+                useCucumberStepReporter: true,
+            },
+        ],
+    ],
 
     // =======================
     // Specs
     // =======================
-    specs: ['./tests/specs/**/*.spec.js'],
+    specs: ['./tests/features/**/*.feature'],
 
     // =======================
     // Capabilities

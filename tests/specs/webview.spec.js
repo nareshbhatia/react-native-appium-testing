@@ -18,9 +18,7 @@ describe('WebView,', () => {
         const allTab = $('a=All');
         expect(allTab.getAttribute('class')).toEqual('active');
 
-        // Now the site can be accessed like you would automate a normal website
-        // keep in mind the responsiveness
-        // Open the API docs
+        // Tap on the IMAGES tab
         $('=IMAGES').click();
 
         // Verify that IMAGES is the active tab
